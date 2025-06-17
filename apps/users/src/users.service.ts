@@ -1,8 +1,24 @@
-import { Injectable } from '@nestjs/common';
+ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class UsersService {
-  getHello(): string {
-    return 'Hello World!';
+
+    private users=[
+        {
+            id:1,
+            fname:'John',
+            lname:'Doe',
+            age:25
+        },
+        {
+            id:2,
+            fname:'Jane',
+            lname:'Dee',
+            age:24
+        }
+    ];
+
+  findAll() {
+    return this.users;
   }
 }
