@@ -1,6 +1,6 @@
 export class BookDto {
     id: number;
     title: string;
-    author: string;
-    rating: number;
+    // author: string;
+    // rating: number;
 }
