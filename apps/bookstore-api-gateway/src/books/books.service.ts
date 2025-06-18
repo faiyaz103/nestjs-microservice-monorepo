@@ -9,13 +9,14 @@ import { UpdateBookDto as ClientUpdateBookDto } from '@app/contracts/books/updat
 import { CreateBookDto as ClientCreateBookDto } from '@app/contracts/books/create-book.dto';
 import { BookDto } from './dto/book.dto';
 import { map } from 'rxjs';
+import { BOOKS_CLIENT } from './constant';
 
 
 
 @Injectable()
 export class BooksService {
 
-    constructor(@Inject('BOOKS_CLIENT') private booksClient:ClientProxy){};
+    constructor(@Inject(BOOKS_CLIENT) private booksClient:ClientProxy){};
 
     // map response model to gateway model
     private mapBookDto(bookDto: ClientBookDto): BookDto{
